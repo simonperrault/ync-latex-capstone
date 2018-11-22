@@ -214,3 +214,43 @@ This table is also now shown in the \hyperref[lst:tabs]{List of Tables} page.
 \textbf{Anyway, for Tables, using the LaTeX Table Generator is a great option.}
 
 \section{Bibliography}
+LaTeX{} is really convenient to deal with bibliography.
+All your references should be in a \texttt{\textasteriskcentered.bib} file.
+Each reference has a unique key, that you will use to refer to that publication.
+
+You can simply cite nearly anything using the \textbackslash{}cite command.
+You can cite conference papers, e.g. ``WatchIt (\cite{Perrault2013}) is an interactive wristband for smart watches.'' or journal articles, e.g. ``Lopez et al. (\cite{Lopez2017}) ran a public consultation in Mexico''.
+In the first example, the key in the bib file is Perrault2013, see\\
+\includegraphics{figures/bibtexkey}
+
+\subsection{How to get Bibtex References?}
+The easiest way to fix the Bibtex snippet you need for a given reference is to use Google Scholar~(\cite{Scholar}).
+On the main page, type the name of the paper you are looking for.
+\\
+
+In the results page, locate the paper:
+\begin{figure}[!h]
+  \centering
+    \includegraphics[width=0.9\textwidth]{figures/scholarrefexample.png}
+  \caption{Example of result on Scholar}
+  \label{fig:scholarref}
+\end{figure}
+
+On the last line of the result (shown in Figure~\ref{fig:scholarref}), there is a \textbf{``} symbol.
+Clicking on it will display a pop-up:
+\begin{figure}[!h]
+  \centering
+    \includegraphics[width=0.7\textwidth]{figures/scholarpopup.png}
+  \caption{Pop-up window with the possible citations}
+  \label{fig:scholarpopup}
+\end{figure}
+\\
+
+At the bottom (see Figure~\ref{fig:scholarpopup}), you will notice a "Bibtex" link. Click on it.
+Scholar will then display a small block of text starting with @ symbol.
+Copy and paste this snippet in your \texttt{biblio.bib} and you are done.
+You may eventually want to check the citation key to something shorter.
+\\
+
+\textbf{You may get unexpected compilation errors with some references. The most common case is that the bibtex entry contains a DOI field, which in turn contains an underscore (\_).}
+If that is the case, simply remove the DOI field (not a great practice but a good workaround).
