@@ -16,7 +16,7 @@ Well, actually there is no best way.
 Hence you are stuck with LaTeX.
 
 \subsection{Goal of this chaper}
-In this chapter, I will demonstrate a few interesting features of LaTeX, and more importantly, provide examples of Figures, Tables, Equations.
+In this chapter, I will demonstrate a few interesting features of LaTeX, and more importantly, provide examples of Figures, Tables, Equations and Code Snippets.
 These may be easy to deal with on Word, but here it is another story.
 The general idea is to keep these examples, copy-paste them, then modify them to fit your needs.
 If you are seeing this content while reading \texttt{main.pdf}, please load the overall LaTeX project in your LaTeX editor, and open the \texttt{chapters/chaper1.tex}.
@@ -72,7 +72,7 @@ Note: the underscore issue may also be encountered with bibliography.
 So if \texttt{bibtex} displays an error, it may also come from an underscore somewhere in the abstract, DOI or URL field.
 
 \section{Equations}
-Here is an example of equation:
+Here is an equation:
 \begin{equation}
 \int_0^\infty e^{-x^2} dx
 \label{eq:eq1}
@@ -87,7 +87,7 @@ In case you would like to have an equation without numbering it? Easy!
 t = a \times log_{2}(\frac{D}{W} + 1) + b
 \end{equation*}
 
-The only difference? Note the \textasteriskcentered symbol in the \textbackslash{}begin\{equation\textbf{\textasteriskcentered}\}.
+The only difference? The \textasteriskcentered{}  symbol in the \textbackslash{}begin\{equation\textbf{\textasteriskcentered}\}.
 This also works with Figures and Tables.
 
 \section{Code Snippets}
@@ -100,9 +100,9 @@ This also works with Figures and Tables.
   }
 \end{lstlisting}
 
-This package is not the best way to show code snippets.
-However, many other packages you could use have compatibility issues.
-Feel free to try alternatives, e.g. \texttt{minted}.
+This template uses the \texttt{lstlisting} package, which not the best for code snippets.
+However, it works without any problem, while other packages may have compatibility issues.
+Feel free to try alternative solutions, the best one being \texttt{minted}.
 
 \section{Figures}
 Figures are a bit tricky with LaTeX {\tiny(not as much as tables though)}.
@@ -118,14 +118,14 @@ This is possible thanks to the \textbackslash{}label command.
 The figure should also be shown on the \hyperref[lst:figs]{List of Figures} page (note this other way of referring to another part of the manuscript!).
 A common practice is use the following naming convention:
 \begin{itemize}
-  \item A prefix, indicating the nature of the object labelled: \texttt{eq} for equation, \texttt{fig} for figure, \texttt{tab} for \texttt{table}.
+  \item A prefix, indicating the nature of the object labelled: \texttt{eq} for equations, \texttt{fig} for figures, \texttt{tab} for tables.
   \item A colon.
   \item A unique name (easy to remember) describing your figure. Example: exp1confmatrix would suggest that the figure shows a confusion matrix for your experiment 1.
 \end{itemize}
 
 A few other points: The \textbackslash{}caption and \textbackslash{}label can be put either before or after the \textbackslash{}includegraphics command.
 When you create a Figure, you need to provide placement information for LaTeX. LaTeX will usually not locate the figures \emph{exactly} where you want them.
-The most common specifiers are: \texttt{h} (here), \texttt{b} (bottom of the page) and \texttt{t} (top). The \texttt{!} specifiers tries to force LaTeX to put the image exactly at the location you specified (with mixed success though).
+The most common specifiers are: \texttt{h} (here), \texttt{b} (bottom of the page) and \texttt{t} (top). The \texttt{!} specifier tries to force LaTeX to put the image exactly at the location you specified (with mixed success though).
 For a longer list of specifiers, please refer to: \url{https://en.wikibooks.org/wiki/LaTeX/Floats,_Figures_and_Captions}.
 
 \subsection{Figure Size}
@@ -224,7 +224,7 @@ In the first example, the key in the bib file is Perrault2013, see\\
 \includegraphics{figures/bibtexkey}
 
 \subsection{How to get Bibtex References?}
-The easiest way to fix the Bibtex snippet you need for a given reference is to use Google Scholar~(\cite{Scholar}).
+The easiest way to find the Bibtex snippet you need for a given reference is to use Google Scholar~(\cite{Scholar}).
 On the main page, type the name of the paper you are looking for.
 \\
 
